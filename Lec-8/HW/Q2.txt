@@ -1,0 +1,7 @@
+Q. why we can't use 'continue' in 'switch' statement?
+ANS:    Switch has flow such that if any case matches, then this case's block come into flow 
+and if the break statement is not there to indicate the end of this case, every case below this case would come into flow, 
+until another break. So, as you can see there seems to be no use of continue here.
+
+    Continue is specifically used in loops for not executing statements after it without breaking out of that loop. 
+When the continue statement is executed, it just starts the loop in its next iteration.
