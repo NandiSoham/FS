@@ -1,26 +1,29 @@
 #include <iostream>
+#include <algorithm>
+#include <list>
 using namespace std;
-
-
-int fibonacci(int n)
-{
-    int a = 0;
-    int b = 1;
-    for (int i = 2; i < n; i++)
-    {
-        int next = a + b;
-        a = b;
-        b = next;
-    } 
-      return b;
-}
 
 int main()
 {
-    int n;
-    cin >> n;
-    
-    cout << "The " <<n<<"th term of the series is = "<< fibonacci(n) << endl;
+    int arr[7] = {3, 5, 7, 15, 27, 98, 45};
+    int search;
+    int val;
 
-    return 0;
+    cout << "enter the element: ";
+    cin >> search;
+
+    for (int i = 0; i < 7; i++)
+    {
+        if (search == arr[i])
+        {
+            cout << "element found" << endl;
+            val = arr[i];
+            cout << "the value is: " << val << endl;
+            break;
+        }
+        else
+        {
+            cout << "element not found";
+        }
+    }
 }
